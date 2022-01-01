@@ -497,6 +497,7 @@ body {
       border: 2px solid #524b3c;
       box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
       top: -0.5rem;
+      left: 2rem;
       cursor: pointer; }
       @media only screen and (max-width: 56.25em) {
         .popup__groupbox-style {

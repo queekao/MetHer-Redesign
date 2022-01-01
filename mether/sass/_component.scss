@@ -524,6 +524,7 @@
       border: 2px solid $color-form-dark2;
       box-shadow: $Shadow-2;
       top: -0.5rem;
+      left: 2rem;
       cursor: pointer;
       @include respond(TabPort) {
         width: 2.7rem;
