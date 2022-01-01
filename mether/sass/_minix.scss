@@ -1,0 +1,20 @@
+////////Responsive
+@mixin respond($breakPoint) {
+  @if $breakPoint == Phone {
+    @media only screen and (max-width: 37.5em) {
+      @content; // 600px = 37.5em
+    }
+  }
+  @if $breakPoint == TabPort {
+    @media only screen and (max-width: 56.25em) {
+      // 900px = 56.25em
+      @content;
+    }
+  }
+  @if $breakPoint == TabLand {
+    @media only screen and (max-width: 75em) {
+      // 1200px = 75em
+      @content;
+    }
+  }
+}

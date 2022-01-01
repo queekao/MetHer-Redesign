@@ -1,0 +1,17 @@
+{
+  "name": "mether",
+  "version": "1.0.0",
+  "description": "Landing page for mether",
+  "main": "script.js",
+  "scripts": {
+    "fuck": "node-sass sass/main.scss css/style.css -w"
+  },
+  "keywords": [
+    "Quee"
+  ],
+  "author": "Quee",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
