@@ -519,11 +519,11 @@
 
     &-style {
       display: inline-block;
-      width: 3rem;
-      height: 3rem;
-      border: 3px solid $color-form-dark2;
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 2px solid $color-form-dark2;
       box-shadow: $Shadow-2;
-      top: -1rem;
+      top: -0.5rem;
       cursor: pointer;
       @include respond(TabPort) {
         width: 2.7rem;
@@ -542,8 +542,8 @@
       display: block;
       box-sizing: border-box;
       position: absolute;
-      left: 5px;
-      top: 0px;
+      left: 3px;
+      top: -1px;
       width: 7px;
       height: 12px;
       border-width: 0 3px 3px 0;

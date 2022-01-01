@@ -14,6 +14,7 @@ const popupHeader = document.querySelector(".popup__header");
 const popupText = document.querySelector(".popup__text");
 const Subscribe = document.querySelector(".subscribe");
 const Join = document.querySelector(".join");
+const mainbtn = document.querySelector(".mainbtn");
 //timer variable
 const cardText = document.querySelectorAll(".card__link");
 const newDate = new Date();
@@ -44,27 +45,26 @@ const countTime = () => {
 countTime();
 //popup change
 const popupContent = {
-  header: "加入MetHer",
-  header2: "訂閱MetHer",
-  text: `<p class="popup__text">
+  header: ["加入MetHer", "訂閱MetHer"],
+  text: [
+    `<p class="popup__text">
   寄出後會收到表單，完成表單繳費<br>後即有精選好禮及VIP會員。
 </p>`,
-  text2: ` <p class="popup__text">
+    ` <p class="popup__text">
   訂閱後即可透過 email 接受<br />最新消息及公告等資訊。
 </p>`,
+  ],
   popupShow(e) {
     popupBG.classList.remove("hidden");
     popup.classList.remove("hidden");
     popupHeader.textContent = e.target.textContent;
-    if (e.target.textContent === this.header) {
+    if (e.target.textContent === this.header[0]) {
       popupText.textContent = "";
-      popupText.insertAdjacentHTML("afterbegin", this.text);
-    } else if (e.target.textContent === this.header2) {
+      popupText.insertAdjacentHTML("afterbegin", this.text[0]);
+    } else if (e.target.textContent === this.header[1]) {
       popupText.textContent = "";
-      popupText.insertAdjacentHTML("afterbegin", this.text2);
+      popupText.insertAdjacentHTML("afterbegin", this.text[1]);
     }
-    console.log(this);
-    console.log(e.target);
   },
   popupHidden() {
     popupBG.classList.add("hidden");
@@ -72,6 +72,7 @@ const popupContent = {
   },
 };
 Subscribe.addEventListener("click", popupContent.popupShow.bind(popupContent));
+mainbtn.addEventListener("click", popupContent.popupShow.bind(popupContent));
 popupBG.addEventListener("click", popupContent.popupHidden);
 Join.addEventListener("click", popupContent.popupShow.bind(popupContent));
 //popup header
