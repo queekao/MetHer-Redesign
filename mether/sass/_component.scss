@@ -250,7 +250,10 @@
   }
   max-width: 50vw;
   @include respond(TabPort) {
-    max-width: 70vw;
+    max-width: 80vw;
+  }
+  @include respond(Phone) {
+    max-width: 90vw;
   }
 }
 .about {
@@ -536,6 +539,7 @@
         height: 2.6rem;
         border: 2px solid $color-form-dark2;
         top: -1rem;
+        left: 0.5rem;
       }
     }
     &-style::after {

@@ -277,7 +277,10 @@ body {
     font-weight: 700; }
   @media only screen and (max-width: 56.25em) {
     .paragraph {
-      max-width: 70vw; } }
+      max-width: 80vw; } }
+  @media only screen and (max-width: 37.5em) {
+    .paragraph {
+      max-width: 90vw; } }
 
 .about {
   display: flex;
@@ -509,7 +512,8 @@ body {
           width: 2.6rem;
           height: 2.6rem;
           border: 2px solid #524b3c;
-          top: -1rem; } }
+          top: -1rem;
+          left: 0.5rem; } }
     .popup__groupbox-style::after {
       content: "";
       display: block;
@@ -555,6 +559,16 @@ body {
   background-color: rgba(188, 147, 147, 0.65);
   height: 90vh;
   position: relative; }
+
+.section {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s;
+  visibility: visible; }
+  .section--hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8rem); }
 
 .section-about {
   background-color: rgba(229, 188, 174, 0.8);

@@ -84,3 +84,21 @@ navClose.addEventListener("click", () => {
   nav.classList.add("nav__list-hidden");
   navClose.classList.add("nav__close-hidden");
 });
+///section move in
+const section = document.querySelectorAll(".section");
+const sectionLanding = document.querySelector(".section-landing");
+const sectionLandingY = sectionLanding.getBoundingClientRect().y;
+const sectionFn = (entries, observer) => {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove("section--hidden");
+  //To know which section is intersecting we use "target"
+};
+const sectionMoveIn = new IntersectionObserver(sectionFn, {
+  root: null,
+  threshold: 0.1,
+});
+section.forEach((section) => {
+  sectionMoveIn.observe(section);
+  if (sectionLandingY > 0) section.classList.add("section--hidden");
+});

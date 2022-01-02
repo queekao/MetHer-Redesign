@@ -13,6 +13,18 @@
   height: 90vh;
   position: relative;
 }
+.section {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s;
+  visibility: visible;
+  &--hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8rem);
+  }
+}
+
 .section-about {
   background-color: rgba($color-secondary, 0.8);
   height: 80rem;
